@@ -1,7 +1,7 @@
 Пример использование тегов
 
 // Добавление записи с тегами teg1 и tag2
-Yii::app()->cache->set($key, $value, 0, new Tags('tag1', 'tag2'));
+Yii::app()->cache->set($key, $value, 0, new ECacheTagsDependency('tag1', 'tag2'));
 
 // Очистка кеша по тегу tag2
 Yii::app()->cache->clear('tag2');

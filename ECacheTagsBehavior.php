@@ -1,5 +1,5 @@
 <?php
-class TaggingBehavior extends CBehavior {
+class ECacheTagsBehavior extends CBehavior {
 
 const PREFIX = '__tag__';
 

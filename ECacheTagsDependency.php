@@ -1,5 +1,5 @@
 <?php
-class Tags implements ICacheDependency {
+class ECacheTagsDependency implements ICacheDependency {
 
 protected $timestamp;
  protected $tags;
@@ -25,7 +25,7 @@ protected $timestamp;
  * @return boolean whether the dependency has changed.
  */
  public function getHasChanged() {
- $tags = array_map(function($i) { return TaggingBehavior::PREFIX.$i; }, $this->tags);
+ $tags = array_map(function($i) { return ECacheTagsBehavior::PREFIX.$i; }, $this->tags);
  $values = Yii::app()->cache->mget($tags);
 
 foreach ($values as $value) {
