@@ -12,7 +12,7 @@ class ECacheTagsBehavior extends CBehavior {
 	public function clear($tags)
 	{
 		foreach ((array) $tags as $tag) {
-			$this->owner->set(self::PREFIX . $tag, time());
+			$this->owner->set(self::PREFIX . $tag, time()+1000);
 		}
 	}
 
