@@ -1,3 +1,24 @@
+## Usage and Configuration
+
+```php
+<?php
+//...
+	'import' => array(
+		'ext.CacheTags.*',
+	),
+	'components' => array(
+		'cache' => array(
+			'class' => 'system.caching.CFileCache',
+			'behaviors' => array(
+				'CacheTagsBehavior' => array(
+					'class' => 'ECacheTagsBehavior',
+				),
+			),
+		),
+	),
+```
+
+
 Пример использование тегов
 
 // Добавление записи с тегами teg1 и tag2
